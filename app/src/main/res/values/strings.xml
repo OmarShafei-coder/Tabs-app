@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TabbedProject</string>
+    <string name="tab_text_1">Contacts</string>
+    <string name="tab_text_2">Chat</string>
+    <string name="tab_text_3">Online</string>
+    <string name="omar">Omar</string>
+    <string name="duration">2:45</string>
+
+</resources>
