@@ -37,7 +37,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     @Override
     public void onBindViewHolder(@NonNull SongViewHolder holder, int position) {
         Module currentElement = data.get(position);
-        //holder.songImage.setImageDrawable(context.getResources().getDrawable(currentElement.get("songImage"),null));
+        holder.songImage.setImageDrawable(context.getResources().getDrawable(currentElement.getSongCover(),null));
         holder.songName.setText(currentElement.getSongName());
         holder.songDuration.setText(currentElement.getSongDuration());
 
@@ -51,14 +51,14 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public class SongViewHolder extends RecyclerView.ViewHolder {
         private TextView songName;
         private TextView songDuration;
-        //private ImageView songImage;
+        private ImageView songImage;
 
         public SongViewHolder(@NonNull View itemView) {
             super(itemView);
 
             songName = itemView.findViewById(R.id.song_name);
             songDuration = itemView.findViewById(R.id.song_duration);
-            //songImage = itemView.findViewById(R.id.song_image);
+            songImage = itemView.findViewById(R.id.song_image);
         }
     }
 }
