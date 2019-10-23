@@ -17,39 +17,5 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
-
     }
 }
-
-/**
- * <androidx.cardview.widget.CardView
- *         android:layout_width="wrap_content"
- *         android:layout_height="wrap_content">
- *
- *         <ImageView
- *             android:id="@+id/song_image"
- *             android:layout_width="60dp"
- *             android:layout_height="60dp"
- *             android:src="@drawable/ic_launcher_foreground"
- *             android:layout_margin="8dp"
- *             android:background="#DA0C0C"/>
- *
- *     </androidx.cardview.widget.CardView>
- *
- *     <LinearLayout
- *         android:layout_width="wrap_content"
- *         android:layout_height="wrap_content"
- *         android:orientation="vertical">
- *
- *         <TextView
- *             android:id="@+id/song_name"
- *             android:layout_width="wrap_content"
- *             android:layout_height="wrap_content"
- *             android:layout_marginTop="16dp" />
- *
- *         <TextView
- *             android:id="@+id/song_duration"
- *             android:layout_width="wrap_content"
- *             android:layout_height="wrap_content" />
- *
- *     </LinearLayout>*/

@@ -17,10 +17,10 @@ import java.util.Map;
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder>{
 
     private Context context;
-    private ArrayList<Map<String,Integer>> data;
+    private ArrayList<Module> data;
     private LayoutInflater layoutInflater;
 
-    public SongAdapter(Context context, ArrayList<Map<String, Integer>> data) {
+    public SongAdapter(Context context, ArrayList<Module> data) {
         this.context = context;
         this.data = data;
         layoutInflater = LayoutInflater.from(context);
@@ -36,10 +36,10 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull SongViewHolder holder, int position) {
-        Map<String,Integer> currentElement = data.get(position);
-        holder.songImage.setImageDrawable(context.getResources().getDrawable(currentElement.get("songImage"),null));
-        holder.songName.setText(currentElement.get("songName"));
-        holder.songDuration.setText(currentElement.get("songDuration"));
+        Module currentElement = data.get(position);
+        //holder.songImage.setImageDrawable(context.getResources().getDrawable(currentElement.get("songImage"),null));
+        holder.songName.setText(currentElement.getSongName());
+        holder.songDuration.setText(currentElement.getSongDuration());
 
     }
 
@@ -51,14 +51,14 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.SongViewHolder
     public class SongViewHolder extends RecyclerView.ViewHolder {
         private TextView songName;
         private TextView songDuration;
-        private ImageView songImage;
+        //private ImageView songImage;
 
         public SongViewHolder(@NonNull View itemView) {
             super(itemView);
 
             songName = itemView.findViewById(R.id.song_name);
             songDuration = itemView.findViewById(R.id.song_duration);
-            songImage = itemView.findViewById(R.id.song_image);
+            //songImage = itemView.findViewById(R.id.song_image);
         }
     }
 }
